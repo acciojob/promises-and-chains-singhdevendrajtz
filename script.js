@@ -3,24 +3,23 @@ const form_=document.querySelector("#ageform")
 const btn=document.querySelector("#btn")
 const name_=document.querySelector("#name")
 const age_=document.querySelector("#age")
-const name=age_.value;
-const age=age_.value;
 
 btn.addEventListener('click',function(e){
+	 e.preventDefault();
 	console.log(name,age)
-	if(name=="" || age=="")
+	if(name.value=="" || age.value=="")
 	{
 	alert("Please enter valid details.")
 	}
 	let prom= new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-		if(age>=18)
+		if(age.value>=18)
 		{
-		resolve(name);
+		resolve(name.value);
 		}
 			else
 		{
-			reject(name);
+			reject(name.value);
 		}
 		},4000)
 	})
