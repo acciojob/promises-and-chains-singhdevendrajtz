@@ -11,7 +11,7 @@ btn.addEventListener('click',function(e){
 
 	  // Validate that inputs are not empty
   if (name === '' || isNaN(age)) {
-    alert('Please enter valid details.');
+    alert('Please enter valid details');
     return;
   }
 
